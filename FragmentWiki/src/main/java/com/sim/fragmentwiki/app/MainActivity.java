@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import com.sim.fragmentwiki.R;
 import com.umeng.analytics.MobclickAgent;
 
 
