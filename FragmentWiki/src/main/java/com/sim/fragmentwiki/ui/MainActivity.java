@@ -1,4 +1,4 @@
-package com.sim.fragmentwiki.app;
+package com.sim.fragmentwiki.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;

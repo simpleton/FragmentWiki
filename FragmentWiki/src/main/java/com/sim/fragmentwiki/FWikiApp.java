@@ -3,11 +3,14 @@ package com.sim.fragmentwiki;
 import android.app.Application;
 import dagger.ObjectGraph;
 import hugo.weaving.DebugLog;
+
 /**
  * Created by simsun on 14-4-2.
  */
 public class FWikiApp extends Application {
   private ObjectGraph objectGraph;
+ // @Inject ActivityHierarchyServer activityHierarchyServer;
+
 
   @Override
   public void onCreate() {
