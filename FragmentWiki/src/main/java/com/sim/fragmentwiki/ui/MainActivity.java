@@ -4,16 +4,27 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import com.sim.fragmentwiki.FWikiApp;
 import com.sim.fragmentwiki.R;
 import com.umeng.analytics.MobclickAgent;
 
+import javax.inject.Inject;
+
 
 public class MainActivity extends ActionBarActivity {
+  @Inject AppContainer appContainer;
+  private ViewGroup container;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+
+    FWikiApp app = FWikiApp.get(this);
+    app.inject(this);
+    container = appContainer.get(this, app);
+
+    getLayoutInflater().inflate(R.layout.activity_main, container);
   }
 
   @Override

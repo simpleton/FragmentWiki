@@ -1,6 +1,7 @@
 package com.sim.fragmentwiki;
 
 import android.app.Application;
+import android.content.Context;
 import com.sim.fragmentwiki.ui.ActivityHierarchyServer;
 import dagger.ObjectGraph;
 import hugo.weaving.DebugLog;
@@ -29,5 +30,9 @@ public class FWikiApp extends Application {
 
   public void inject(Object obj) {
     objectGraph.inject(obj);
+  }
+
+  public static FWikiApp get(Context context) {
+    return (FWikiApp) context.getApplicationContext();
   }
 }

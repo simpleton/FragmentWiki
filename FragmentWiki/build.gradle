@@ -40,6 +40,8 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:1.3.0'
     compile 'com.squareup.picasso:picasso:2.2.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    debugCompile 'com.jakewharton.scalpel:scalpel:1.1.2'
 }
 
 

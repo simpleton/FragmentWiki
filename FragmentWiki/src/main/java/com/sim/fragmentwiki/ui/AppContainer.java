@@ -16,8 +16,7 @@ public interface AppContainer {
   /** An {@link AppContainer} which returns the normal activity content view. */
   AppContainer DEFAULT = new AppContainer() {
     @Override public ViewGroup get(Activity activity, FWikiApp app) {
-      //return findById(activity, android.R.id.content);
-      return null;
+      return (ViewGroup)activity.findViewById(android.R.id.content);
     }
   };
 }
